@@ -1,0 +1,39 @@
+Problem 2
+Pattern in each input is periodic every 6 rows
+It persists for 1.5 period(6 rows) and stops
+The output continues to complete the revolution by adding the next 3 rows based on the period/pattern
+
+Probem 3
+Dimention of input and output same so it is easy to compare pixels
+All pixels seem to keep original position except 'last piece' of every shape
+shift last piece left by 1 unit to solve it
+
+Probem 4
+Some i/o dimention
+seed pattern of a different colour
+crumb seeds placed next to seed pattern of different coulor (no colour info needed to solve puzzle)
+complete crumb seed according to build full seed pattern
+repeat until the dimention gets exhausted
+Recognise that crums at an angle should be completed according at that angle. check sample 3
+
+
+1. Recognise the difference/similarity in dimention between input/output(note the difference)
+1. Recognise the position of clours in the input
+2. Look at the output to determine the output
+3. Does the output change in dimention, colour, 
+Does input and output have similar pattern of boxes? if so find the pattern
+3. Find a 'momentary'/'local' pattern between input and output
+
+
+The Problem with traditional supervised learning is that input and outputs all come from the same
+distribution so it makes sense to give input and ask model to predict an output and overtime with many 
+examples it can hopefully generalise to fit the function.
+Every Problem of this challenge is different, there is no single distribution(whether a superposition of several unique functions or not)
+from which a model needs to generalise to. So it makes no sense to give it labels and ask it to predict
+output.
+
+It would be best to have a model which takes in both input and output and then try to figure it out.
+Given that inputs and outputs for a Problem set come from the same distribution, a robust model should 
+be able to find the momentary pattern between the given inputs to outputs.
+
+So the model i will develop will take both inputs and outputs.
