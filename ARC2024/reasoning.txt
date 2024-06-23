@@ -16,6 +16,54 @@ complete crumb seed according to build full seed pattern
 repeat until the dimention gets exhausted
 Recognise that crums at an angle should be completed according at that angle. check sample 3
 
+Probem 5
+diffent i/o dimention
+grey line a division
+second segment superimposed on the first
+"and" gate applied to obtain output
+
+Probem 6
+same i/o dimention
+nothing can be inferred by just lookinga at inputs
+Look at first input, understand the pattern, colours involved
+output had same pattern at same pixel locations but pattern repeated until canvas filled[periodicity and frequency]
+for input 3, collapse colours into merged pattern, repeat pattern as in the previous two inputs
+
+Probem 7
+same i/o dimention
+two patterns here
+1 stationary, other mobile
+mobile moves to stationary in a straight line until it touches it
+shapes of patterns doesn't matter, colour determines stationary/mobile
+
+Probem 8
+same i/o dimention for a given pair
+Recognise the pairs of colours
+Recognise the orientation of the pair(must be vertical/horizontal)
+Fill pixels between each horizontal/vertical oriented pair
+if one of an eligible pair share a cordinate with a third, continue the fill from latter to former
+
+Probem 9
+same i/o dimention for all pairs
+Recognise colour change from input 0
+4 colours used 
+Recognise the order of filling colours from input 1
+clours filled as (yellow, green, red, blue) from lowest to highest block
+
+problem 10
+same i/o dimention
+9 non-repeating patterns
+input 1.
+first pattern, index[(:,3),(:,3)] chosen and distributed accross canvas such that each pixel fills the indices of a the other patterns
+input 2.
+middle pattern chosen and pixels distributed
+input 3
+middle from bottom row chosen and distributed
+##############################################################################
+LEAD1: from Probem 5, if the 'and' gate were applid to get the output here, and we know a classical function can be generalised using fundamental gates,
+why not 'teach'/'arm' the system with the gates and require it to generalise a function from a given input to an output? 
+The problem with this approach is that such gates(not the inverse, amplification gates but and,or,...) need at least two inputs.
+Problem 5 had 2 inputs but some problems like 4 have only 1 input so this cannot technically apply.
 
 1. Recognise the difference/similarity in dimention between input/output(note the difference)
 1. Recognise the position of clours in the input
@@ -25,6 +73,26 @@ Does input and output have similar pattern of boxes? if so find the pattern
 3. Find a 'momentary'/'local' pattern between input and output
 
 
+
+
+https://kaggle.com/code/jazivxt/mnemonic-diffused
+Analyze Automations for Pattern Matching:
+Matrix sizing shifts from initial to solution state
+Matrix color counts from source to ouput variations
+Matrix color mix for deletes / additions
+Direction of copies within grids
+Rotations, Reflections, Shrinkage, Grouth
+    Step one, Can Initial State be placed on Solution State with x% confidence
+    Step two, Identify additions and deletions
+    Step three, Infer a pattern hypothesis and test
+    Step four, Validate solutions
+
+
+
+
+
+
+##################################################################################################
 The Problem with traditional supervised learning is that input and outputs all come from the same
 distribution so it makes sense to give input and ask model to predict an output and overtime with many 
 examples it can hopefully generalise to fit the function.
